@@ -1,0 +1,258 @@
+html{
+    font-family: 'Oxygen', sans-serif;
+    background-color:#151B25;
+    height:100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0%;
+    height:100%;
+}
+#main-container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+ul{
+    padding:0%;
+    margin: 0%;
+}
+li{
+    list-style: none;
+    padding: 1em;
+}
+table{
+    width: 95%;
+    height: 95%;
+}
+td{
+    background-color:grey;
+    border: 2px;
+    border-color:black;
+    font-size: 100%;
+    padding: 0%;
+}
+
+#game-wrap{
+    padding:1%;
+    min-width: 780px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #121212;
+}
+#game-ui{
+    height:15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#game-grid{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#pause-menu{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #1d1d1d;
+    font-size:70px;
+    border: solid 5px #bb86fc;
+    
+}
+#title-menu-height{
+    height:70%;
+}
+#high-score{
+    width:100%;
+    margin-top:5%;
+    padding-left:10%;
+    padding-bottom:5%;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+}
+
+#end-stats{
+    padding-top:5%;
+}
+
+#start-screen{
+    display: none;
+}
+#instructions-screen{
+    display: none;
+
+}
+#options-screen{
+    display: none;
+}
+#game-screen{
+    display: none;
+}
+
+#game-grid{
+    display: none;
+}
+#pause-menu{
+    display: none;
+}
+
+#end-screen{
+    
+}
+
+#instructions-list{
+    font: size 50%;
+}
+
+#options-difficulty{
+    margin-right:5%;
+}
+
+#game-ui{
+
+}
+.instructions{
+    padding: 0px;
+    margin: 0px;
+    margin-left:10%;
+    width: 80%;
+    list-style:disc;
+    text-align: left;
+    font-size:20px;
+    padding:5px;
+}
+
+
+.section-size{
+    min-height:760px;
+    border-radius: 10px;
+    width:100%;
+    background-color: #1d1d1d;
+    padding-bottom:15%;
+}
+
+.return-spacing{
+    height:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+}
+
+.title{
+    height:30%;
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+}
+
+.line{
+    margin-left: 10%;
+    height:5px;
+    width:80%;
+    border-bottom: solid 3px #bb86fc;
+}
+
+.screen-content-height{
+    height:55%;
+}
+.menu-button{
+    background-color: #bb86fc;
+    border:none;
+    color: #070707;
+    padding: 18px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 700;
+    width:240px;
+    border-radius: 10px;
+}
+.option-button{
+    background-color: #bb86fc;
+    border:none;
+    color: #070707;
+    padding: 18px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    width:240px;
+    border-radius: 10px;
+}
+
+.option-list{
+    padding-top:6%;
+    padding-bottom:6%;
+}
+.custom-par{
+    text-align: center;
+    font-size: 30px;
+    color:white;
+}
+
+.ui-box{
+    width:80px;
+    height:80px;
+    border: solid 2px #c7fc86;
+}
+.ui-button{
+    background-color: #bb86fc;
+    border: none;
+    color: #070707;
+    margin-top: 5px;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    width:130px;
+ 
+    border-radius: 10px;
+}
+
+.inline-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.high-score-box{
+    width:30%;
+}
+
+.high-score-list{
+    padding:0%;
+}
