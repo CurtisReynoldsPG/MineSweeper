@@ -1,13 +1,19 @@
 // Copyright (c) 2021 Curtis Reynolds
 'use strict';
 
+import Minefield from "./Minefield";
+
+const SIZE = 12;
+const MINE_COUNT  = 10;
+
 export default class Game {
 
     constructor() {
         this.board = {
             //Eventually change size depending on difficulty
-            size:16,
+            size:SIZE,
         };
+        this.minefield = new Minefield(SIZE, MINECOUNT);
         this.gameOver = false;
         
     }
@@ -45,10 +51,10 @@ export default class Game {
         
         
         let markup = "<table>";
-        for (let row = 0; row < this.board.size; row++) {
+        for (let row = 0; row < SIZE; row++) {
 
             markup += "<tr>";
-            for(let col =0; col < this.board.size; col++){
+            for(let col =0; col < SIZE; col++){
 
                 markup += "<td>1</td>";
             }
