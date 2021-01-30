@@ -1,8 +1,11 @@
+/* Copyright (c) 2021 Curtis Reynolds */
+
 html{
     font-family: 'Oxygen', sans-serif;
     background-color:#151B25;
     height:100%;
 }
+
 body{
     display: flex;
     flex-direction: column;
@@ -11,32 +14,37 @@ body{
     text-align: center;
     margin: 0%;
     height:100%;
-}
-#main-container{
-    width:100%;
-    display: flex;
-    justify-content: center;
-    
+    /* Allows viewing entire page before working navigation is added */
+    margin-top:2000px;
 }
 
 ul{
     padding:0%;
     margin: 0%;
 }
+
 li{
     list-style: none;
     padding: 1em;
 }
+
 table{
     width: 95%;
     height: 95%;
 }
+
 td{
     background-color:grey;
     border: 2px;
     border-color:black;
     font-size: 100%;
     padding: 0%;
+}
+
+#main-container{
+    width:100%;
+    display: flex;
+    justify-content: center;
 }
 
 #game-wrap{
@@ -50,6 +58,7 @@ td{
     text-align: center;
     background-color: #121212;
 }
+
 #game-ui{
     height:15%;
     display: flex;
@@ -79,11 +88,13 @@ td{
     background-color: #1d1d1d;
     font-size:70px;
     border: solid 5px #bb86fc;
-    
+
 }
+
 #title-menu-height{
     height:70%;
 }
+
 #high-score{
     width:100%;
     margin-top:5%;
@@ -98,42 +109,10 @@ td{
     padding-top:5%;
 }
 
-#start-screen{
-    display: none;
-}
-#instructions-screen{
-    display: none;
-
-}
-#options-screen{
-    display: none;
-}
-#game-screen{
-    display: none;
-}
-
-#game-grid{
-    display: none;
-}
-#pause-menu{
-    display: none;
-}
-
-#end-screen{
-    
-}
-
-#instructions-list{
-    font: size 50%;
-}
-
 #options-difficulty{
     margin-right:5%;
 }
 
-#game-ui{
-
-}
 .instructions{
     padding: 0px;
     margin: 0px;
@@ -144,7 +123,6 @@ td{
     font-size:20px;
     padding:5px;
 }
-
 
 .section-size{
     min-height:760px;
@@ -183,6 +161,7 @@ td{
 .screen-content-height{
     height:55%;
 }
+
 .menu-button{
     background-color: #bb86fc;
     border:none;
@@ -209,6 +188,20 @@ td{
     width:240px;
     border-radius: 10px;
 }
+.ui-button{
+    background-color: #bb86fc;
+    border: none;
+    color: #070707;
+    margin-top: 5px;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    width:130px;
+    border-radius: 10px;
+}
 
 .option-list{
     padding-top:6%;
@@ -225,21 +218,7 @@ td{
     height:80px;
     border: solid 2px #c7fc86;
 }
-.ui-button{
-    background-color: #bb86fc;
-    border: none;
-    color: #070707;
-    margin-top: 5px;
-    padding: 12px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 700;
-    width:130px;
- 
-    border-radius: 10px;
-}
+
 
 .inline-flex{
     display: flex;
