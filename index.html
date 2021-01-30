@@ -2,7 +2,7 @@
 <!-- Copyright (c) 2021 Curtis Reynolds-->
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/main_Style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
@@ -10,6 +10,8 @@
     <body>
         <container id="main-container">
             <section id="game-wrap" >
+
+                <!-- End Screen -->
                 <section id="end-screen" class="section-size custom-par">
                     Game over
                     <div class="line"></div>
@@ -56,9 +58,8 @@
                             </li>
                         </ul>
                     </div>
-                    
-
                 </section>
+
                 <!-- Game screen -->
                 <section id="game-screen" class="section-size">
                     <div id="game-ui" class="custom-par">
@@ -84,6 +85,7 @@
                         Paused
                     </div>
                 </section>
+
                 <!-- Options screen -->
                 <section id="options-screen" class="section-size">
                     <div class="title">
@@ -134,7 +136,8 @@
                             </li>
                         </ul>
                     </div>
-                </section>                
+                </section>   
+
                 <!-- Instructions screen -->
                 <section id="instructions-screen" class="section-size">
                     <div class="title inbox-element">
@@ -143,7 +146,6 @@
                     <span class="custom-par">Instructions</span>
                     <div class="line"></div>
                     <div class="custom-par screen-content-height inline-flex">
-                        
                         <ul id="instructions-list">
                             <li class="instructions">
                                 Left-click an empty square to reveal it.
@@ -175,6 +177,7 @@
                         
                     </div>
                 </section>
+
                 <!-- Title Screen -->
                 <section id="start-screen" class="section-size">
                     <div class="title ">
@@ -198,6 +201,7 @@
                         </ul>
                     </div>
                 </section>
+                
             </section>
         </container>
         <script type="module" src="scripts/index.js"></script>

@@ -5,6 +5,7 @@ export default class Game {
 
     constructor() {
         this.board = {
+            //Eventually change size depending on difficulty
             size:16,
         };
         this.gameOver = false;
@@ -41,6 +42,7 @@ export default class Game {
             <tr><td></td><td>...</td>.
         </table>
         */
+        
         
         let markup = "<table>";
         for (let row = 0; row < this.board.size; row++) {
