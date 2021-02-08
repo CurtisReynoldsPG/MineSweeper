@@ -235,3 +235,7 @@ td{
 .high-score-list{
     padding:0%;
 }
+
+.hidden{
+    display:none;
+}

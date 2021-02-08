@@ -1,8 +1,10 @@
-import Square from "./square";
+// Copyright (c) 2021 Curtis Reynolds
+'use strict';
+
+import Square from "./square.js";
 
 export default class Minefield{
-    
-    
+
     constructor(size = 10, mineCount = 10){
 
         this.size = size;
@@ -26,8 +28,14 @@ export default class Minefield{
         }
     }
 
-    _randomizeMines(){}
+    _randomizeMines(){
+        //TODO: each mine, randomize row, col
 
-    _countAdjacent(){}
+        //TODO: place mine at row, colum, unless mine already there
+    }
+
+    _countAdjacent(){
+        //TODO: walk through field, for each square adjacent
+    }
 
 }
