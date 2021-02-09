@@ -240,3 +240,10 @@ td{
 .hidden{
     display:none !important;
 }
+
+.gird-clicked{
+    background-color:#c7fc86;
+}
+.gird-right-clicked{
+    background-color:blue;
+}
