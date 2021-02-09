@@ -15,7 +15,7 @@ body{
     margin: 0%;
     height:100%;
     /* Allows viewing entire page before working navigation is added */
-    margin-top:2000px;
+    /* margin-top:2000px; */
 }
 
 ul{
@@ -77,9 +77,8 @@ td{
     text-align: center;
 }
 
-#pause-menu{
-    height:100%;
-    width:100%;
+#pause-screen{
+    height: 98%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -172,9 +171,10 @@ td{
     display: inline-block;
     font-size: 28px;
     font-weight: 700;
-    width:240px;
+    width:170px;
     border-radius: 10px;
 }
+
 .option-button{
     background-color: #bb86fc;
     border:none;
@@ -185,7 +185,7 @@ td{
     display: inline-block;
     font-size: 18px;
     font-weight: 700;
-    width:240px;
+    width:120px;
     border-radius: 10px;
 }
 .ui-button{
@@ -199,10 +199,12 @@ td{
     display: inline-block;
     font-size: 16px;
     font-weight: 700;
-    width:130px;
+    width:70px;
     border-radius: 10px;
 }
-
+.button-select{
+    background-color: #c7fc86;
+}
 .option-list{
     padding-top:6%;
     padding-bottom:6%;
@@ -218,7 +220,6 @@ td{
     height:80px;
     border: solid 2px #c7fc86;
 }
-
 
 .inline-flex{
     display: flex;
@@ -237,5 +238,5 @@ td{
 }
 
 .hidden{
-    display:none;
+    display:none !important;
 }

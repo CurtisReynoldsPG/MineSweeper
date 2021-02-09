@@ -12,7 +12,7 @@
             <section id="game-wrap" >
 
                 <!-- End Screen -->
-                <section id="end-screen" class="section-size custom-par">
+                <section id="end-screen" class="section-size custom-par hidden">
                     Game over
                     <div class="line"></div>
                     <div id="end-stats">
@@ -61,14 +61,14 @@
                 </section>
 
                 <!-- Game screen -->
-                <section id="game-screen" class="section-size">
+                <section id="game-screen" class="section-size hidden">
                     <div id="game-ui" class="custom-par">
                         <div id="timer" class="ui-box inline-flex">
                             000
                         </div>
                         <div>
-                            <button type="button" class="ui-button">Pause</button>
-                            <button type="button" class="ui-button">Restart</button>
+                            <div id="pause-button" class="ui-button">Pause</div>
+                            <div class="ui-button">Restart</div>
                         </div>
                         <div id="bomb-count" class="ui-box inline-flex">
                             000
@@ -81,18 +81,19 @@
                         </table>
                         
                     </div>
-                    <div id="pause-menu" class="custom-par">
+                    <div id="pause-screen" class="custom-par hidden">
                         Paused
                     </div>
                 </section>
 
                 <!-- Options screen -->
-                <section id="options-screen" class="section-size">
+                <section id="option-screen" class="section-size hidden">
                     <div class="title">
                         Mine Sweeper
                     </div>
-                    <span class="custom-par">Options</span>
                     <div class="line"></div>
+                    <br>
+                    <span class="custom-par">Options</span>
                     <div class="custom-par screen-content-height inline-flex">
                         <div id="options-difficulty">
                             Difficulty
@@ -132,19 +133,21 @@
                     <div class="return-spacing">
                         <ul>
                             <li>
-                                <button type="button" class="menu-button return_button">Return</button>
+                                <button type="button" id="option-back-button" class="menu-button return_button">Return</button>
                             </li>
                         </ul>
                     </div>
                 </section>   
 
                 <!-- Instructions screen -->
-                <section id="instructions-screen" class="section-size hidden">
+                <section id="instruction-screen" class="section-size hidden">
                     <div class="title inbox-element">
                         Mine Sweeper
                     </div>
-                    <span class="custom-par">Instructions</span>
+                    
                     <div class="line"></div>
+                    <br>
+                    <span class="custom-par">Instructions</span>
                     <div class="custom-par screen-content-height inline-flex">
                         <ul id="instructions-list">
                             <li class="instructions">
@@ -171,7 +174,7 @@
                     <div class="return-spacing">
                         <ul>
                             <li>
-                                <button type="button" id="back-button" class="menu-button return_button">Return</button>
+                                <button type="button" id="instruction-back-button" class="menu-button return_button">Return</button>
                             </li>
                         </ul>
                     </div>
@@ -186,18 +189,19 @@
                     <div id="title-menu-height" class=" screen-content-height inline-flex">
                         <ul>
                             <li>
-                                <button type="button"id="Home-Button" class="menu-button">play game</button>
+                                <div id="play-button" class="menu-button">play game</div>
                             </li>
                             <li>
-                                <button type="button"id="instructions-button" class="menu-button">instructions</button>
+                                <div id="instructions-button" class="menu-button">instructions</div>
                             </li>
                             <li>
-                                <button type="button" class="menu-button">Options</button>
+                                <div id="option-button" class="menu-button">Options</div>
                             </li>
                             <li>
-                                <button type="button" class="menu-button">quit</button>
+                                <div class="menu-button">quit</div>
                             </li>
                         </ul>
+
                     </div>
                 </section>
                 
