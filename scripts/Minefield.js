@@ -5,12 +5,13 @@ import Square from "./square.js";
 
 export default class Minefield{
 
-    constructor(size = 10, mineCount = 10){
+    constructor(size = 10, mineCount = 100){
 
         this.size = size;
         this.field = []; // turn this into a 2d array of squares
+        this.testarray = [];
 
-        
+
         this.generateBoard();
         this.updateCellHandlers();
         //initialize the minefield with empty squares
@@ -43,15 +44,22 @@ export default class Minefield{
         markup += "</table>";
         //find the game area, attach this table
         document.querySelector("#game-grid").innerHTML = markup;
+        
+
+        
     }
 
     updateCellHandlers(){
         //click the square
+
         document.querySelectorAll(".square")
             .forEach(element =>{
                 element.addEventListener('click', event =>{
                         if(event.button === 0){
                             element.classList.add("gird-clicked"); 
+                            if(){
+                                console.log("Lost");
+                            }
                         }
                 })
                 element.addEventListener('contextmenu', event =>{
@@ -71,16 +79,27 @@ export default class Minefield{
 
     _init()
     {
+
         for (let i = 0; i < this.size; i++){
             this.field[i] = [];
             for(let j = 0; j < this.size; j++){
                 this.field[i][j] = new Square();
+                this.field[i][j].setLocation(i,j);
             }
         }
     }
 
-    _randomizeMines(){
+    _randomizeMines(minesToPlace){
         //TODO: each mine, randomize row, col
+        let i = 0;
+        while(i < minesToPlace){
+            this.rndX = Math.floor(Math.random()* this.size);
+            this.rndY = Math.floor(Math.random()* this.size);
+            if(!this.field[this.rndX][this.rndY].returnMine()){
+                this.field[this.rndX][this.rndY].setMine();
+                i++
+            }
+        }
 
         //TODO: place mine at row, colum, unless mine already there
     }

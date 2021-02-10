@@ -5,7 +5,7 @@ import Minefield from "./Minefield.js";
 import EventListeners from "./event_listeners/EventListeners.js";
 
 const SIZE = 12;
-const MINE_COUNT  = 10;
+const MINE_COUNT  = 50;
 
 export default class Game {
 
@@ -17,7 +17,6 @@ export default class Game {
         this.minefield = new Minefield(SIZE, MINE_COUNT);
         this.EventListeners = new EventListeners();
         this.gameOver = false;
-        
         this.message = "Hello world";
     }
 

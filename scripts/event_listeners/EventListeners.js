@@ -10,4 +10,8 @@ export default class EventListeners
         this.MenuEventListener = new MenuEventListener();
         this.GameEventListener = new GameEventListener();
     }
+
+    test(){
+        
+    }
 }
