@@ -15,15 +15,23 @@ export default class Square{
 
     setMine(){
         this.hasMine = true;
-        console.log("Placed Mine");
+
     }
     
     returnMine(){
         return this.hasMine;
     }
 
+    returnAdjacent(){
+        return this.adjacentMines;
+    }
+
     setLocation(col, row){
         this.col = col;
         this.row = row;
+    }
+
+    IncreaseMines(){
+        this.adjacentMines++;
     }
 }

@@ -244,6 +244,39 @@ td{
 .gird-clicked{
     background-color:#c7fc86;
 }
+.grid-with-number{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.one{
+    background-image: url("/images/1.png");
+}
+.two{
+    background-image: url("/images/2.png");
+}
+.three{
+    background-image: url("/images/3.png");
+}
+.four{
+    background-image: url("/images/4.png");
+}
+.five{
+    background-image: url("/images/5.png");
+}
+.six{
+    background-image: url("/images/6.png");
+}
+.seven{
+    background-image: url("/images/6.png");
+}
+.eight{
+    background-image: url("/images/7.png");
+}
+.grid-with-mine{
+    background-image: url("/images/mine.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 .gird-right-clicked{
     background-color:blue;
 }
