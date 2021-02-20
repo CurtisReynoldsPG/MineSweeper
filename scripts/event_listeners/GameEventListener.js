@@ -9,36 +9,27 @@ export default class GameEventListener
     {
         this.paused = false;
 
-        document.querySelector("#pause-button")
-            .addEventListener('click', event => this.pauseButtonListener(event));
+
         document.querySelector("#instruction-back-button")
              .addEventListener('click', event => this.resumeButtonListener(event));
+             
+        document.querySelector("#quit-button")
+        .addEventListener('click', event => this.QuitButtonListener(event));
         // document.querySelector("#restart-button")
         //      .addEventListener('click', event => this.restartButtonListener(event));     
     }
 
-    pauseButtonListener(event){
-        if(!this.paused){
-            document.querySelector("#pause-screen")
-            .classList.remove("hidden");
-            document.querySelector("#pause-button")
-            .innerHTML = "Unpause";
-            document.querySelector("#pause-button")
-            .classList.add("button-select");
-            document.querySelector("#game-grid")
+    QuitButtonListener(event){
+        document.querySelector("#game-screen")
             .classList.add("hidden");
-            this.paused = true;
-            return;
-        }
-        document.querySelector("#pause-screen")
-        .classList.add("hidden");
-        document.querySelector("#pause-button")
-        .innerHTML = "Pause";
-        document.querySelector("#pause-button")
-        .classList.remove("button-select");
-        document.querySelector("#game-grid")
-        .classList.remove("hidden");
-        this.paused = false;
+        document.querySelector("#start-screen")
+            .classList.remove("hidden");
+        document.querySelector("#quit-button")
+            .classList.add("hidden");
+        document.querySelector("#timer")
+            .innerHTML = 0;
+        document.querySelector("#end-game")
+            .innerHTML = "";    
     }
     
     resumeButtonListener(event){
@@ -58,5 +49,6 @@ export default class GameEventListener
         document.querySelector("#timer")
                 .innerHTML = this.time;
         this.ReloadGrid();
+
     }
 }

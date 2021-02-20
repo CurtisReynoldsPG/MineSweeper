@@ -18,16 +18,16 @@ export default class MenuEventListener
         document.querySelector("#option-back-button")
             .addEventListener('click', event => this.optionBackButtonListener(event));
 
-        document.querySelector("#play-button")
-            .addEventListener('click', event => this.playButtonListener(event));
+        // document.querySelector("#play-button")
+        //     .addEventListener('click', event => this.playButtonListener(event));
         
         let temp = document.querySelectorAll(".button");
         temp.forEach(element => {
             element.addEventListener('mouseover', event =>{
-                element.classList.add("button-select");
+                element.classList.add("button-hover");
             });
             element.addEventListener('mouseout', event =>{
-                element.classList.remove("button-select");
+                element.classList.remove("button-hover");
             });
         })
         temp = document.querySelectorAll(".menu-button");
@@ -64,11 +64,13 @@ export default class MenuEventListener
         .classList.remove("hidden");
     }
     
-    playButtonListener(event){
-        document.querySelector("#start-screen")
-        .classList.add("hidden");
-        document.querySelector("#game-screen")
-        .classList.remove("hidden");
-    }
+
+
+    // playButtonListener(event){
+    //     document.querySelector("#start-screen")
+    //     .classList.add("hidden");
+    //     document.querySelector("#game-screen")
+    //     .classList.remove("hidden");
+    // }
 }
 

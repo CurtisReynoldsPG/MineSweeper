@@ -66,10 +66,32 @@ export default class FieldGenerator{
         }
     }
 
+    placeNewMine(){
+        let i = 0;
+        while(i < 1){
+        this.rndX = Math.floor(Math.random()* this.size);
+        this.rndY = Math.floor(Math.random()* this.size);
+        //check if mine is present if not place mine
+        if(!this.field[this.rndY][this.rndX].ReturnMine()){
+            this.field[this.rndY][this.rndX].setMine();
+            i++;
+        }
+        }
+    }
+
      //Updates grid with ammount
      UpdateGrid(){
         for (let i = 0; i < this.size; i++){
             for(let j = 0; j < this.size; j++){
+                this.countAdjacent(i, j);
+            }
+        }
+    }
+
+    RecalculateGrid(){
+        for (let i = 0; i < this.size; i++){
+            for(let j = 0; j < this.size; j++){
+                this.field[i][j].adjacentMines = 0;
                 this.countAdjacent(i, j);
             }
         }

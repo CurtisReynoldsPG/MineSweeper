@@ -17,6 +17,7 @@ export default class Minefield{
         this.tilesCovered;
         this.time = 0;
         this.paused = false;
+        this.firstClick = true;
     }
 
     Timer(){
@@ -38,7 +39,7 @@ export default class Minefield{
         this.field = this.boardGenerator.GenerateBoard(this.size,this.mineCount);
         this.updateCellHandlers();
         this.gameOver = false;
-
+        this.firstClick = true;
         document.querySelector("#bomb-count")
             .innerHTML = this.mineCount;
     }
@@ -51,11 +52,22 @@ export default class Minefield{
                         if(event.button === 0 && !this.gameOver && !this.field[element.dataset.rows][element.dataset.collums].ReturnFlag()){
                             element.classList.add("grid-clicked"); 
                             if(this.field[element.dataset.rows][element.dataset.collums].ReturnMine()){
+                                if(this.firstClick){
+                                    this.boardGenerator.placeNewMine();
+                                    this.field[element.dataset.rows][element.dataset.collums].hasMine = false;
+                                    this.boardGenerator.RecalculateGrid();
+                                    this.CheckAdjacent(element.dataset.rows, element.dataset.collums, element);
+                                    this.firstClick = false;
+                                    return;
+                                }
                                 this.gameOver = true;
                                 this.SetLossScore();
                                 element.classList.add("grid-with-mine"); 
                                 this.RevealMines(element.dataset.rows,element.dataset.collums)
                                 return;
+                            }
+                            if(this.firstClick){
+                                this.firstClick = false;
                             }
                             this.CheckAdjacent(element.dataset.rows, element.dataset.collums, element);
                         }
