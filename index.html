@@ -11,69 +11,26 @@
         <container id="main-container">
             <section id="game-wrap" >
 
-                <!-- End Screen -->
-                <section id="end-screen" class="section-size custom-par hidden">
-                    Game over
-                    <div class="line"></div>
-                    <div id="end-stats">
-                        Time: 000
-                    </div>
-                    <div id="high-score">
-                        <div class="high-score-box">
-                            <ul>
-                                <li class="high-score-list">1: 000</li>
-                                <li class="high-score-list">2: 000</li>
-                                <li class="high-score-list">3: 000</li>
-                                <li class="high-score-list">4: 000</li>
-                                <li class="high-score-list">5: 000</li>
-                            </ul>
-                        </div>
-                        <div class="high-score-box">
-                            <ul>
-                                <li class="high-score-list">6: 000</li>
-                                <li class="high-score-list">7: 000</li>
-                                <li class="high-score-list">8: 000</li>
-                                <li class="high-score-list">9: 000</li>
-                                <li class="high-score-list">10: 000</li>
-                            </ul>
-                        </div>
-                        <div class="high-score-box">
-                            <ul>
-                                <li class="high-score-list">11: 000</li>
-                                <li class="high-score-list">12: 000</li>
-                                <li class="high-score-list">13: 000</li>
-                                <li class="high-score-list">14: 000</li>
-                                <li class="high-score-list">15: 000</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="line"></div>
-                    <div id="end-menu-buttons" class=" screen-content-height inline-flex">
-                        <ul>
-                            <li>
-                                <button type="button" class="menu-button">Menu</button>
-                            </li>
-                            <li>
-                                <button type="button" class="menu-button">quit</button>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-
                 <!-- Game screen -->
                 <section id="game-screen" class="section-size hidden">
                     <div id="game-ui" class="custom-par">
                         <div id="timer" class="ui-box inline-flex">
-                            000
+                            0
                         </div>
                         <div>
-                            <div id="pause-button" class="ui-button">Pause</div>
-                            <div class="ui-button">Restart</div>
+                        <div id="end-game">
                         </div>
+                        <div>
+                            <div id="pause-button" class="button  ui-button">Pause</div>
+                            <div id="quit-button" class="button  ui-button hidden">Quit</div>
+                            <div id="restart-button"class="button ui-button">Restart</div>
+                        </div>
+                         </div>
                         <div id="bomb-count" class="ui-box inline-flex">
                             000
                         </div>
                     </div>
+
                     <div class="line"></div>
                     <div id="game-grid">
                         <table>
@@ -99,31 +56,23 @@
                             Difficulty
                             <ul>
                                 <li class="option-list">
-                                    <button type="button" class="option-button">Easy</button>
+                                    <div id="easy-button" class="button option-button">Easy</div>
                                 </li>
                                  <li class="option-list">
-                                    <button type="button" class="option-button">Medium</button>
+                                    <div id="medium-button" class="button option-button button-select">Medium</div>
                                  </li>
                                 <li class="option-list">
-                                    <button type="button" class="option-button">Hard</button>
+                                    <div id="hard-button" class="button option-button">Hard</div>
                                 </li>
                             </ul>
                         </div>
                         <div class="custom-par">
-                            <div id="options-dark-mode">
-                                Toggle light mode
-                                <ul>
-                                    <li>
-                                        <button type="button" class="option-button">Light Mode</button>
-                                    </li>
-                                </ul>
-    
-                            </div>
+
                             <div id="options-audio">
                                 Mute sound effects
                                 <ul>
                                     <li>
-                                        <button type="button" class="option-button">Sounds</button>
+                                        <div class="button option-button">Sounds</div>
                                     </li>
                                 </ul>
                             </div>
@@ -133,7 +82,7 @@
                     <div class="return-spacing">
                         <ul>
                             <li>
-                                <button type="button" id="option-back-button" class="menu-button return_button">Return</button>
+                                <div id="option-back-button" class="button menu-button return_button">Return</div>
                             </li>
                         </ul>
                     </div>
@@ -154,18 +103,16 @@
                                 Left-click an empty square to reveal it.
                             </li>
                             <li class="instructions">
-                                Right-click (or Ctrl+click) an empty square to flag it
+                                Right-click a square to flag it
                             </li>
                             <li class="instructions">
-                                Midde-click (or left+right click) a number to reveal
-                                its adjacent squares.
+                                Flag every mine and uncover every non-flagged square to win
                             </li>
                             <li class="instructions">
-                                Press space bar while hovering over a square to flag
-                                or reveal its adjacent squares.
+                                You can pause the game with the pause button.
                             </li>
                             <li class="instructions">
-                                Press F2 or click the smiley face to start a new game.
+                                You can start a new with using the restart button.
                             </li>
                         </ul>
                     </div>
@@ -174,7 +121,7 @@
                     <div class="return-spacing">
                         <ul>
                             <li>
-                                <button type="button" id="instruction-back-button" class="menu-button return_button">Return</button>
+                                <div id="instruction-back-button" class="button menu-button return_button">Return</div>
                             </li>
                         </ul>
                     </div>
@@ -189,16 +136,16 @@
                     <div id="title-menu-height" class=" screen-content-height inline-flex">
                         <ul>
                             <li>
-                                <div id="play-button" class="menu-button">play game</div>
+                                <div id="play-button" class="button menu-button">Play game</div>
                             </li>
                             <li>
-                                <div id="instructions-button" class="menu-button">instructions</div>
+                                <div id="instructions-button" class="button menu-button">Instructions</div>
                             </li>
                             <li>
-                                <div id="option-button" class="menu-button">Options</div>
+                                <div id="option-button" class="button menu-button">Options</div>
                             </li>
                             <li>
-                                <div class="menu-button">quit</div>
+                                <div class="button menu-button">Quit</div>
                             </li>
                         </ul>
 

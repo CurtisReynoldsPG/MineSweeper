@@ -1,11 +1,12 @@
 // Copyright (c) 2021 Curtis Reynolds
 'use strict';
 
-import Minefield from "./Minefield.js";
+import Minefield from "./minefield/Minefield.js";
 import EventListeners from "./event_listeners/EventListeners.js";
 
-const SIZE = 12;
-const MINE_COUNT  = 50;
+const SIZE = 20;
+const MINE_COUNT  = 1;
+
 
 export default class Game {
 
@@ -13,21 +14,20 @@ export default class Game {
         this.board = {
             //Eventually change size depending on difficulty
             size:SIZE,
+
         };
+
         this.minefield = new Minefield(SIZE, MINE_COUNT);
         this.EventListeners = new EventListeners();
         this.gameOver = false;
-        this.message = "Hello world";
+
+        document.querySelector("#restart-button")
+        .addEventListener('click', event => this.restartButtonListener(event));
+        document.querySelector("#play-button")
+        .addEventListener('click', event => this.minefield.StartTime(event));
     }
-
-
     run(){
 
-        while(!this.gameOver){
-
-            this.update();
-            this.render();
-        }
     }
 
     update(){
@@ -35,14 +35,21 @@ export default class Game {
         this.gameOver=true;
     }
 
-    render(){
-        //change the dom and the screen to show the player what's going on
-
-        //generate the playfield
-
-        //this.resize();
+    restartButtonListener(event){
+        this.time = 0;
+        document.querySelector("#timer")
+                .innerHTML = this.time;
+        this.ReloadGrid();
+    }
+    
+    ReloadGrid(){
+        this.minefield.ResetField();
     }
 
+    SetWinScore(){
+        document.querySelector("#end-stats")
+        .innerHTML = this.time;                                                 
+    }
 
 }
 

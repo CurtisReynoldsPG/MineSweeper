@@ -4,9 +4,10 @@
 export default class Square{
 
     constructor(){
-        console.log("Square");
         this.hasMine = false;
         this.adjacentMines = 0;
+        this.uncovered = false;
+        this.flagged = false;
         //this.location
         this.col = 0;
         this.row = 0;
@@ -15,18 +16,33 @@ export default class Square{
 
     setMine(){
         this.hasMine = true;
-
     }
     
-    returnMine(){
+    Uncover(){
+        this.uncovered = true;
+    }
+    ReturnMine(){
         return this.hasMine;
+    }
+    ReturnFlag(){
+        return this.flagged;
+    }
+    returnMineCount(){
+        return this.adjacentMines;
     }
 
     returnAdjacent(){
         return this.adjacentMines;
     }
 
-    setLocation(col, row){
+    ReturnUncovered(){
+        return this.uncovered;
+    }
+
+    SetFlag(value){
+        this.flagged = value;
+    }
+    setLocation(row, col){
         this.col = col;
         this.row = row;
     }

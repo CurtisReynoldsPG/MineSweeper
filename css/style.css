@@ -162,45 +162,37 @@ td{
 }
 
 .menu-button{
-    background-color: #bb86fc;
-    border:none;
-    color: #070707;
     padding: 18px 36px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 28px;
-    font-weight: 700;
     width:170px;
     border-radius: 10px;
 }
 
 .option-button{
-    background-color: #bb86fc;
-    border:none;
-    color: #070707;
     padding: 18px 36px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 18px;
-    font-weight: 700;
     width:120px;
     border-radius: 10px;
 }
 .ui-button{
-    background-color: #bb86fc;
-    border: none;
-    color: #070707;
     margin-top: 5px;
     padding: 12px 32px;
+    font-size: 16px;
+    width:70px;
+}
+.button
+{
+    background-color: #bb86fc;
+    border:none;
+    color: #070707;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
     font-weight: 700;
-    width:70px;
     border-radius: 10px;
+}
+.button-hover{
+    background-color: #c7fc86;
 }
 .button-select{
     background-color: #c7fc86;
@@ -241,12 +233,15 @@ td{
     display:none !important;
 }
 
-.gird-clicked{
+.grid-clicked{
     background-color:#c7fc86;
 }
 .grid-with-number{
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+.Empty{
+    background-image: url("/images/8.png");
 }
 .one{
     background-image: url("/images/1.png");
@@ -267,16 +262,23 @@ td{
     background-image: url("/images/6.png");
 }
 .seven{
-    background-image: url("/images/6.png");
+    background-image: url("/images/7.png");
 }
 .eight{
-    background-image: url("/images/7.png");
+    background-image: url("/images/8.png");
 }
 .grid-with-mine{
     background-image: url("/images/mine.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-.gird-right-clicked{
-    background-color:blue;
+.grid-with-flagged_mine{
+    background-image: url("/images/flagged_mine.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.grid-right-clicked{
+    background-image: url("/images/Flag.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
