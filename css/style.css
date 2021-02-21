@@ -14,10 +14,16 @@ body{
     text-align: center;
     margin: 0%;
     height:100%;
-    /* Allows viewing entire page before working navigation is added */
-    /* margin-top:2000px; */
 }
-
+a{
+    color:#bb86fc;
+}
+a:visited{
+    color:#bb86fc;
+}
+a:hover{
+    color:#c7fc86;
+}
 ul{
     padding:0%;
     margin: 0%;

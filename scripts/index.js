@@ -3,7 +3,7 @@
 
 import Game from './Game.js';
 
-
+// Starts game
 let game = new Game();
-// Tell game to run
+
 

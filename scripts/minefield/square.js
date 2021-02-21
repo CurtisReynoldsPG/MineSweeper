@@ -4,16 +4,18 @@
 export default class Square{
 
     constructor(){
+        //set defualt bool values
         this.hasMine = false;
-        this.adjacentMines = 0;
         this.uncovered = false;
         this.flagged = false;
+        //set default adjacent mines
+        this.adjacentMines = 0;
         //this.location
         this.col = 0;
         this.row = 0;
-        this.mine = null; // new mine();
     }
 
+    //Ask Scott about getters and setters again then fix this.
     setMine(){
         this.hasMine = true;
     }

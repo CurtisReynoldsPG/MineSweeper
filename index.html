@@ -2,10 +2,13 @@
 <!-- Copyright (c) 2021 Curtis Reynolds-->
 <html>
     <head>
+        <script src="./scripts/Buzz/buzz.js"></script>
+        <link rel="shortcut icon" href="images/mine.png">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+        <title>Mine-Sweeper</title>
     </head>
     <body>
         <container id="main-container">
@@ -72,7 +75,7 @@
                                 Mute sound effects
                                 <ul>
                                     <li>
-                                        <div class="button option-button">Sounds</div>
+                                        <div id="mute-button" class="button option-button">Sounds</div>
                                     </li>
                                 </ul>
                             </div>
@@ -127,6 +130,33 @@
                     </div>
                 </section>
 
+                <!-- Credits screen -->
+                <section id="credits-screen" class="section-size hidden">
+                    <div class="title inbox-element">
+                        Mine Sweeper
+                    </div>
+                    
+                    <div class="line"></div>
+                    <br>
+                    <span class="custom-par">Credits</span>
+                    <div class="custom-par screen-content-height ">
+                        <!-- Just useing a bunch of br's as this was page was never intended but I needed it. -->
+                        <br><br><br><br>
+                        Sound effects obtained from <a href="https://www.zapsplat.com/">zapsplat.com</a>
+                        <br><br><br><br><br><br>
+                        Copyright (C) Curtis Reynolds 2021
+                    </div>
+
+                    <div class="line"></div>
+                    <div class="return-spacing">
+                        <ul>
+                            <li>
+                                <div id="credits-back-button" class="button menu-button return_button">Return</div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
                 <!-- Title Screen -->
                 <section id="start-screen" class="section-size">
                     <div class="title ">
@@ -145,10 +175,9 @@
                                 <div id="option-button" class="button menu-button">Options</div>
                             </li>
                             <li>
-                                <div class="button menu-button">Quit</div>
+                                <div id="credits-button" class="button menu-button">Credits</div>
                             </li>
                         </ul>
-
                     </div>
                 </section>
                 
