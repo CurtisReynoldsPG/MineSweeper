@@ -27,7 +27,7 @@ export default class Minefield{
                 document.querySelector("#timer")
                     .innerHTML = this.time;
             }else{
-                window.clearInterval(timer);
+                //window.clearInterval(timer);
             }
         }, 1000);
         
@@ -140,16 +140,16 @@ export default class Minefield{
 
             //Gets field and displays it.
             const id = `square-${row}-${col}`;
-            document.querySelector(`#${id}`).classList.add("grid-with-number");
-            document.querySelector(`#${id}`).classList.add("grid-clicked");
-            document.querySelector(`#${id}`).classList.add("empty");
+            let object = document.querySelector(`#${id}`);
+            object.classList.add("grid-with-number");
+            object.classList.add("grid-clicked");
+            object.classList.add("empty");
     
             // //Check cell on left
             if(col != 0)
             {
                 this.CheckAdjacent(row,col-1);
             }
-
             //Check cell on right
             if(col != this.size -1)
             {

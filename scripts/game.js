@@ -70,7 +70,6 @@ export default class Game {
         .classList.remove("button-select");
         document.querySelector("#game-grid")
         .classList.remove("hidden");
-        this.minefield.Timer();
         this.minefield.paused = false;
         this.paused = false;
     }
