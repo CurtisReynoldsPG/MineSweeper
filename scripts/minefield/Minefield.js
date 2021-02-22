@@ -208,10 +208,30 @@ export default class Minefield{
                 //continues recursive loop with cell to the left
                 this.CheckAdjacent(row,col-1);
             }
+            //Check cell on top-left
+            if(row != 0 && col != 0)
+            {
+                this.CheckAdjacent(row-1,col-1);
+            }
+            //Check cell on bottom-left
+            if(row != 0 && col != this.size -1)
+            {
+                this.CheckAdjacent(row-1,parseInt(col)+1);
+            }
             //Check cell on right
             if(col != this.size -1)
             {
                 this.CheckAdjacent(row,parseInt(col)+1);
+            }
+            //Check top-right
+            if(row != this.size -1 && col != 0)
+            {
+                this.CheckAdjacent(parseInt(row)+1,col-1);
+            }
+            //Check cell on bottom-right
+            if(row != this.size -1 && col != this.size -1)
+            {
+                this.CheckAdjacent(parseInt(row)+1,parseInt(col)+1);
             }
             //Check cell on top
             if(row != 0)
