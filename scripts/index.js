@@ -6,4 +6,4 @@ import Game from './game.js';
 // Starts game
 let game = new Game();
 
-
+game.getResolution();

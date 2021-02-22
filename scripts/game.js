@@ -82,6 +82,20 @@ export default class Game {
             })
     }
 
+    getResolution() {
+        if(window.screen.width * window.devicePixelRatio < 1600 || window.screen.height * window.devicePixelRatio < 900 ){
+            document.querySelector("#main-container")
+            .classList.add("scale60");
+            return;
+        }
+        if(window.screen.width * window.devicePixelRatio < 1980 || window.screen.height * window.devicePixelRatio < 1080 ){
+            document.querySelector("#main-container")
+                .classList.add("scale80");
+            return;
+        }
+
+    }
+
     StartButtonListener(event){
         //plays sound
         this.playClickSound();
