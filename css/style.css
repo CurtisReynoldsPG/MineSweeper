@@ -246,9 +246,6 @@ td{
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-.Empty{
-    background-image: url("/images/8.png");
-}
 .one{
     background-image: url("/images/1.png");
 }

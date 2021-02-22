@@ -4,19 +4,18 @@
 import Minefield from "./minefield/Minefield.js";
 
 
-const EASY_SIZE = 20;
-const EASY_MINE_COUNT  = 40;
+const EASY_SIZE = 10;
+const EASY_MINE_COUNT  = 10;
 
 const MEDIUM_SIZE = 20;
 const MEDIUM_MINE_COUNT  = 40;
 
-const HARD_SIZE = 20;
-const HARD_MINE_COUNT  = 40;
+const HARD_SIZE = 25;
+const HARD_MINE_COUNT  = 100;
 
 //Easy 10,10
 //Medium 20,40
 //Hard 25, 100
-//Impossible 30,200
 
 export default class Game {
 
