@@ -91,7 +91,7 @@ export default class Game {
         }
         if(window.screen.width * window.devicePixelRatio < 1900 || window.screen.height * window.devicePixelRatio < 1000){
             document.querySelector("#main-container")
-            .classList.add("scale60");
+            .classList.add("scale80");
             return;
         }
     }
