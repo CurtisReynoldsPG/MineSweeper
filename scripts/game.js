@@ -82,18 +82,18 @@ export default class Game {
             })
     }
 
+    //gets screen resolution and resizes depending on it.
     getResolution() {
         if(window.screen.width * window.devicePixelRatio < 1600 || window.screen.height * window.devicePixelRatio < 900 ){
             document.querySelector("#main-container")
             .classList.add("scale60");
             return;
         }
-        if(window.screen.width * window.devicePixelRatio < 1980 || window.screen.height * window.devicePixelRatio < 1080 ){
+        if(window.screen.width * window.devicePixelRatio < 1900 || window.screen.height * window.devicePixelRatio < 1000){
             document.querySelector("#main-container")
-                .classList.add("scale80");
+            .classList.add("scale60");
             return;
         }
-
     }
 
     StartButtonListener(event){
